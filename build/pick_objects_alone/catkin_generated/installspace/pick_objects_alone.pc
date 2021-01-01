@@ -1,0 +1,8 @@
+prefix=/home/robond/workspace/catkin_ws/install
+
+Name: pick_objects_alone
+Description: Description of pick_objects_alone
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
