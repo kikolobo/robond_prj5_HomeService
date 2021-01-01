@@ -3,8 +3,11 @@
 #include "nav_msgs/Odometry.h"
 #include <cmath>
 
-//double pickUpPos[2]  = {1.85, -1.5};
-double pickUpPos[2]  = {-5.81, -4.26};
+//First dropoff in one side of the map.
+double pickUpPos[2]  = {-5.812, -4.261};
+//double pickUpPos[2]  = {1.85, -1.5}; //For testing only (smaller distance)
+
+//Set the dropoff in the other side of the map.
 double dropOffPos[2] = {4.59, -4.76};
 
 double pose[2] = {0, 0};  // current pose
@@ -53,7 +56,7 @@ int main( int argc, char** argv )
   while (ros::ok())
   {
     visualization_msgs::Marker marker;
-    // Set the frame ID and timestamp.  See the TF tutorials for information on these.
+    // Set the frame ID and timestamp.  
     marker.header.frame_id = "odom";
     marker.header.stamp = ros::Time::now();
 
@@ -83,16 +86,6 @@ int main( int argc, char** argv )
 
     marker.lifetime = ros::Duration();
 
-    /*while (marker_pub.getNumSubscribers() < 1)
-    {
-      if (!ros::ok())
-      {
-        return 0;
-      }
-      ROS_WARN_ONCE("Please create a subscriber to the marker");
-      sleep(1);
-    }*/
-
     ros::spinOnce();
 
     if (state == PICKUP) {
@@ -102,7 +95,7 @@ int main( int argc, char** argv )
       marker_pub.publish(marker);
       if (reach_pick_up()) {
         sleep(5);
-        ROS_INFO("Carrying to drop zone ... ");
+        ROS_INFO("let's go to the ' drop point ... ");
         state = CARRY;
       }
     }
@@ -112,7 +105,7 @@ int main( int argc, char** argv )
       marker.pose.position.y = dropOffPos[1];
       marker_pub.publish(marker);
       if (reach_drop_zone()) {
-        ROS_INFO("Reached drop zone. ");
+        ROS_INFO("Arrived at the drop point. ");
         state = DROP;
       }
     }

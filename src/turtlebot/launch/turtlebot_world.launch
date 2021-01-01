@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
-    <!-- Robot pose -->
+    <!-- Set the Robot pose in map coordinates -->
     <arg name="x" default="0"/>
     <arg name="y" default="-1.5"/>
     <arg name="z" default="0"/>
@@ -12,7 +12,7 @@
     <!-- Launch other relevant files-->
     <include file="$(find turtlebot)/launch/robot_description.launch"/>
 
-    <!-- World File -->
+    <!-- Set the map File relative to turtlebot path-->
     <arg name="world_file" default="$(find turtlebot)/../map/myWorld.world"/>
 
     <!-- Launch Gazebo World -->

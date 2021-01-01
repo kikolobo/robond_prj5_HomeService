@@ -17,7 +17,7 @@
         <param name="base_frame_id" value="robot_footprint"/>
         <param name="global_frame_id" value="map"/>
 
-        <!-- Define initial pose -->
+        <!-- Define the robot initial pose -->
         <param name="initial_pose_x" value="0"/>
         <param name="initial_pose_y" value="-1.5"/>
         <param name="initial_pose_a" value="-1.5"/>

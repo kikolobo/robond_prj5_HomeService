@@ -7,6 +7,7 @@ double goal[2] = {0, 0};
 
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
+//Get the goal
 void get_goal(const visualization_msgs::Marker::ConstPtr& msg)
 {
   goal[0] = msg->pose.position.x;
@@ -14,19 +15,20 @@ void get_goal(const visualization_msgs::Marker::ConstPtr& msg)
   ROS_INFO("The goal %f %f", goal[0], goal[1]);
 }
 
+//Send the goal to move base
 void send_goal_to_move_base(MoveBaseClient & ac, double x, double y, double orient)
 {
   move_base_msgs::MoveBaseGoal goal;
   goal.target_pose.header.frame_id = "odom";
   goal.target_pose.header.stamp = ros::Time::now();
 
-  // Position + orientation for the robot 
+  // Assign the Position + orientation for the robot 
   goal.target_pose.pose.position.x = x;
   goal.target_pose.pose.position.y = y;
   goal.target_pose.pose.orientation.w = orient;
 
   // Send  goal position to reach
-  ROS_INFO("Sending goal ...");
+  ROS_INFO("Sending the goal ...");
   ac.sendGoal(goal);
 
   // Wait an infinite time for the results
@@ -34,9 +36,9 @@ void send_goal_to_move_base(MoveBaseClient & ac, double x, double y, double orie
 
   // Did robot reached its goal
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-    ROS_INFO("Reached!");
+    ROS_INFO("Reached the goal!");
   else
-    ROS_WARN("Did not reach goal!!!.");
+    ROS_WARN("Could not reach goal!!!.");
 }
 
 int main(int argc, char** argv){
@@ -58,7 +60,7 @@ int main(int argc, char** argv){
 
   send_goal_to_move_base(ac, goal[0], goal[1], 1.0);
 
-  sleep(3); // simulate the picking up
+  sleep(3); // simulate the picking up by waiting a few seconds
 
   ros::spinOnce();
 
