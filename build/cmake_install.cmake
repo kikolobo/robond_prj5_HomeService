@@ -130,6 +130,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/robond/workspace/catkin_ws/build/teleop_twist_keyboard/cmake_install.cmake")
   include("/home/robond/workspace/catkin_ws/build/turtlebot/cmake_install.cmake")
   include("/home/robond/workspace/catkin_ws/build/add_markers/cmake_install.cmake")
+  include("/home/robond/workspace/catkin_ws/build/add_markers_alone/cmake_install.cmake")
   include("/home/robond/workspace/catkin_ws/build/pick_objects/cmake_install.cmake")
   include("/home/robond/workspace/catkin_ws/build/slam_gmapping/gmapping/cmake_install.cmake")
 

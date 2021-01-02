@@ -93,6 +93,14 @@
 /home/robond/workspace/catkin_ws/build/add_markers/CMakeFiles/visualization_msgs_generate_messages_eus.dir
 /home/robond/workspace/catkin_ws/build/add_markers/CMakeFiles/roscpp_generate_messages_eus.dir
 /home/robond/workspace/catkin_ws/build/add_markers/CMakeFiles/visualization_msgs_generate_messages_lisp.dir
+/home/robond/workspace/catkin_ws/build/add_markers_alone/CMakeFiles/list_install_components.dir
+/home/robond/workspace/catkin_ws/build/add_markers_alone/CMakeFiles/install.dir
+/home/robond/workspace/catkin_ws/build/add_markers_alone/CMakeFiles/rebuild_cache.dir
+/home/robond/workspace/catkin_ws/build/add_markers_alone/CMakeFiles/edit_cache.dir
+/home/robond/workspace/catkin_ws/build/add_markers_alone/CMakeFiles/add_markers_alone_node.dir
+/home/robond/workspace/catkin_ws/build/add_markers_alone/CMakeFiles/install/strip.dir
+/home/robond/workspace/catkin_ws/build/add_markers_alone/CMakeFiles/install/local.dir
+/home/robond/workspace/catkin_ws/build/add_markers_alone/CMakeFiles/test.dir
 /home/robond/workspace/catkin_ws/build/pick_objects/CMakeFiles/install.dir
 /home/robond/workspace/catkin_ws/build/pick_objects/CMakeFiles/rebuild_cache.dir
 /home/robond/workspace/catkin_ws/build/pick_objects/CMakeFiles/install/local.dir

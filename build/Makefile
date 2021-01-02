@@ -764,6 +764,19 @@ visualization_msgs_generate_messages_lisp/fast:
 .PHONY : visualization_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named add_markers_alone_node
+
+# Build rule for target.
+add_markers_alone_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 add_markers_alone_node
+.PHONY : add_markers_alone_node
+
+# fast build rule for target.
+add_markers_alone_node/fast:
+	$(MAKE) -f add_markers_alone/CMakeFiles/add_markers_alone_node.dir/build.make add_markers_alone/CMakeFiles/add_markers_alone_node.dir/build
+.PHONY : add_markers_alone_node/fast
+
+#=============================================================================
 # Target rules for targets named pick_objects_node
 
 # Build rule for target.
@@ -1641,6 +1654,7 @@ help:
 	@echo "... visualization_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... visualization_msgs_generate_messages_lisp"
+	@echo "... add_markers_alone_node"
 	@echo "... pick_objects_node"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"

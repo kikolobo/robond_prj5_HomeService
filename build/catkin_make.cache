@@ -1,2 +1,2 @@
-add_markers:pick_objects:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:teleop_twist_keyboard:turtlebot
+add_markers:add_markers_alone:pick_objects:slam_gmapping/gmapping:slam_gmapping/slam_gmapping:teleop_twist_keyboard:turtlebot
 -DCATKIN_DEVEL_PREFIX=/home/robond/workspace/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/robond/workspace/catkin_ws/install -G Unix Makefiles
